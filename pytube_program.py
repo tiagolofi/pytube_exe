@@ -20,12 +20,19 @@ def download_yt(link: str, type: str):
   else:
     print('ERROR: type would be audio or video\n\n\n')
 
-print("\nBEM VINDO AO PYTUBE DOWNLOAD VIDEO!\n")
-link_video = str(input('YouTube video URL:'))
-type_output = str(input('File type (audio or video):'))
-print("\n\n")
+while(True):
 
-download_yt(
-  link=link_video,
-  type=type_output
- )
+  print("\nBEM VINDO AO PYTUBE DOWNLOAD VIDEO!\n")
+  link_video = str(input('YouTube video URL:'))
+  type_output = str(input('File type (audio or video):'))
+  print("\n\n")
+
+  download_yt(
+    link=link_video,
+    type=type_output
+  )
+
+  quit = str(input('Quit? Y for yes or n for not:\n'))
+
+  if quit == 'Y':
+    break
